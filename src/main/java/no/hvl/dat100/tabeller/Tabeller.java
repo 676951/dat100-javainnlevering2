@@ -1,5 +1,10 @@
 package no.hvl.dat100.tabeller;
 
+import static java.lang.Integer.parseInt;
+import static javax.swing.JOptionPane.*;
+import static java.lang.Integer.*;
+
+
 public class Tabeller {
 
 	// a)
@@ -21,9 +26,11 @@ public class Tabeller {
 	
 	// b)
 	public static String tilStreng(int[] tabell) {
-		String[] tabell1 = {"42, ","67, ","89"};
+		String[] tabell1 = {"[42, ","67, ","89]"};
 		for (String tall : tabell1)
+			
 		System.out.print(tall);
+		System.out.print("\n");
 		
 		return null;
 		
@@ -33,17 +40,56 @@ public class Tabeller {
 	// c)
 	public static int summer(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int[] heltallTabell2 = {1,2,4,7};
+		int sum = 0;
+		for (int i = 0; i < heltallTabell2.length; i++) {
+			
+			sum += heltallTabell2[i];
+			
+			}
+		System.out.print("Summen av tabellen er: " + sum);
+		System.out.print("\n");
+			
+		return sum;
 	}
+	
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		int [] tall2 = {3, 5, 8, 6};
+		String tallTxt = showInputDialog("Gi et tall: ");
+		int leterEtter = parseInt(tallTxt);
+		
+		
+		boolean funnet = false;
+		int i = 0;
+		while ( !funnet && i < tall2.length) {
+			if (tall2[i] == leterEtter) {
+				funnet = true;
+			}else {
+				i++;
+				
+			}
+		}
+		
+	if (funnet) {
+		System.out.print("True");
+		System.out.print("\n");
+	}else {
+		System.out.print("False");
+		System.out.print("\n");
+		
+		}
+	return !funnet && funnet;
 	}
+	
+
+		
+
+
+		
+		
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
