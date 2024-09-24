@@ -9,7 +9,7 @@ public class Tabeller {
 		for (int i = 0; i <= 4; i++) {
 			int v = heltallTabell[i];
 			
-			if (i < heltallTabell.length - 1) {
+			if (i > 0) {
 				System.out.print(", ");
 				
 			}
@@ -17,33 +17,16 @@ public class Tabeller {
 			System.out.print(v);
 			
 		}
-		}
+	}
 	
 	// b)
 	public static String tilStreng(int[] tabell) {
+		String[] tabell1 = {"42, ","67, ","89"};
+		for (String tall : tabell1)
+		System.out.print(tall);
 		
-		int[] tabell2 = {42, 67, 89};
-		int[] utskrift = tabell2;
+		return null;
 		
-		
-		
-		for (int j = 0; j < tabell2.length; j++) {
-			int w = tabell2[j];
-			
-
-			System.out.print(utskrift);
-			
-			if ( j < tabell2.length -1) {
-				System.out.print(", ");
-				
-			}
-
-		}
-		
-		System.out.print("]");
-		return "";
-		
-
 		
 	}
 
