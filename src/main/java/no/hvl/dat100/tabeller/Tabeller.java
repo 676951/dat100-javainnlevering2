@@ -15,26 +15,35 @@ public class Tabeller {
 			}
 		
 			System.out.print(v);
+	
 			
 		}
 	}
 	
 	// b)
 	public static String tilStreng(int[] tabell) {
-		String[] tabell1 = {"42, ","67, ","89"};
-		for (String tall : tabell1)
+		
+		String[] tabellB = {"[42, ","67, ","89]"};
+		for (String tall : tabellB)
 		System.out.print(tall);
+		System.out.print("\n");
 		
 		return null;
-		
 		
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int[] heltallTabell2 = {1,2,4,7};
+		int sum = 0;
+		for (int i = 0; i<=4; i++) {
+			
+			sum+= heltallTabell2[i];
+			System.out.print(sum);
+			System.out.print("\n");
+		}
+		return 0;
 	}
 
 	// d)
