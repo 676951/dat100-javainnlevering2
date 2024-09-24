@@ -21,21 +21,16 @@ public class Tabeller {
 		
 			System.out.print(v);
 	
-			
 		}
 	}
 	
 	// b)
 	public static String tilStreng(int[] tabell) {
-<<<<<<< HEAD
 		
-		String[] tabellB = {"[42, ","67, ","89]"};
-		for (String tall : tabellB)
-=======
+
 		String[] tabell1 = {"[42, ","67, ","89]"};
 		for (String tall : tabell1)
-			
->>>>>>> f5291fec13e6fd6561b67c6698eaf32d3f8ea511
+
 		System.out.print(tall);
 		System.out.print("\n");
 		
@@ -48,15 +43,6 @@ public class Tabeller {
 
 		int[] heltallTabell2 = {1,2,4,7};
 		int sum = 0;
-<<<<<<< HEAD
-		for (int i = 0; i<=4; i++) {
-			
-			sum+= heltallTabell2[i];
-			System.out.print(sum);
-			System.out.print("\n");
-		}
-		return 0;
-=======
 		for (int i = 0; i < heltallTabell2.length; i++) {
 			
 			sum += heltallTabell2[i];
@@ -66,7 +52,6 @@ public class Tabeller {
 		System.out.print("\n");
 			
 		return sum;
->>>>>>> f5291fec13e6fd6561b67c6698eaf32d3f8ea511
 	}
 	
 
@@ -100,11 +85,6 @@ public class Tabeller {
 	return !funnet && funnet;
 	}
 	
-
-		
-
-
-		
 		
 
 	// e)
