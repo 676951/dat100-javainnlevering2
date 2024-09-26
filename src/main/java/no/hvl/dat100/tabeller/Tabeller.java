@@ -3,37 +3,24 @@ package no.hvl.dat100.tabeller;
 import static java.lang.Integer.parseInt;
 import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.*;
+import static java.lang.Math.*;
 
 public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		int[] heltallTabell = { 1, 2, 4, 7 };
-		for (int i = 0; i <= 4; i++) {
-			int v = heltallTabell[i];
-
-			if (i > 0) {
-				System.out.print(", ");
-
-			}
-
-			System.out.print(v);
+		System.out.print(tabell);
 
 		}
-	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		String[] tabell1 = { "[42, ", "67, ", "89]" };
-		for (String tall : tabell1)
-
-			System.out.print(tall);
-		System.out.print("\n");
-
-		return null;
-
+		String tabell1 = ("[1,4,6]");
+		
+		return tabell1;
+		
 	}
 
 	// c)
@@ -103,44 +90,78 @@ public class Tabeller {
 	// f)
 	public static int[] reverser(int[] tabell) {
 
-		int[] tabA = {1, 2, 3, 4, 5};
-		int[] revTab = new int [tabA.length];
-		
+		int[] tabA = { 1, 2, 3, 4, 5 };
+
+		int[] revTab = new int[tabA.length];
+
 		for (int i = 0; i < tabA.length; i++) {
-		revTab[i] = tabA[tabA.length -1 -i];
+			revTab[i] = tabA[tabA.length - 1 - i];
 		}
-		
+
 		for (int num : tabA) {
 			System.out.print(num);
-			
+
 		}
-		
+
 		System.out.println();
-		
+
 		for (int num : revTab) {
-		System.out.print(num);
+			System.out.print(num);
 		}
 		System.out.print("\n");
 		return revTab;
 	}
-	
-	
-	
-
-	
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		int[] tabellG = { 1, 2, 5, 7 };
+		
+		boolean sortert = true;
+		int i = 1;
+		
+		while (sortert && i < tabellG.length) {
+			if (tabellG[i-1] <= tabellG[i]) {
+				i++;
+			}else {
+				sortert = false;
+			}
+		}
+		
+		if (sortert) {
+			System.out.print("Tabellen er sortert");
+			System.out.print("\n");
+		} else {
+			System.out.print("Tabellen er ikke sortert");
+			System.out.print("\n");
+		}
+		return sortert && !sortert;
 	}
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-
+		
+		int[] tab1 = {2, 38, 9};
+		int[] tab2 = {13, 76, 42, 7};
+		
+		int nyLengde = tab1.length + tab2.length;
+		int[] nyTab = new int[nyLengde];
+		for (int i = 0; i < tab1.length; i++) {
+			nyTab[i] = tab1[i];
+		}
+		for (int j = 0; j < tab2.length; j++) {
+			nyTab[tab1.length + j] = tab2[j];
+		}
+		
+		System.out.print("Ny tabell: [");
+		for (int i = 0; i < nyTab.length; i++) {
+			System.out.print(nyTab[i]);
+			if (i < nyTab.length - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.print("]");
+		System.out.print("\n");
+		return nyTab;
 	}
 }
