@@ -3,6 +3,7 @@ package no.hvl.dat100.tabeller;
 import static java.lang.Integer.parseInt;
 import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.*;
+import static java.lang.Math.*;
 
 public class Tabeller {
 
@@ -119,10 +120,12 @@ public class Tabeller {
 		System.out.println("Oppgave G: Tabellen er sortert");
 		return true;
 
+
 	}
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+
 		int[] tabell3 = new int[tabell1.length + tabell2.length];
 
 		for (int i=0; i<tabell1.length;i++) {
