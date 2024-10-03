@@ -52,11 +52,7 @@ public class Matriser {
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
-		
-		if (a == null || b == null) {
-			return false;
-		}
-		    	
+	 	
 		if (a.length != b.length) {
 		    return false;
 		}
